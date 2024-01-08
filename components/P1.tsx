@@ -11,7 +11,7 @@ const P1 = () => {
   };
 
   return (
-    <div className="flex flex-col border-black border-[5px]">
+    <div className="flex flex-col border-black border-[5px] h-fit">
       {items.map((item, inx) => (
         <div
           key={item}

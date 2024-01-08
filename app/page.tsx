@@ -15,12 +15,25 @@ export default function Home() {
       label: "导航栏",
       href: "/3",
     },
+    {
+      label: "搜索框",
+      href: "/4",
+    },
+    {
+      label: "选项框",
+      href: "/5",
+    },
+    {
+      label: "表单",
+      href: "/6",
+    },
   ];
   return (
-    <div className="border flex flex-col gap-2">
+    <div className="border flex flex-col gap-2 shadow-md rounded-md h-fit">
       {navItems.map((item) => (
         <Link
           href={item.href}
+          key={item.label}
           className="flex justify-center items-center px-5 py-4 text-xl font-medium hover:text-green-300 hover:bg-black"
         >
           {item.label}
