@@ -7,6 +7,10 @@ export default function Home() {
       label: "离开盒子高亮还在",
       href: "/1",
     },
+    {
+      label: "图片放大Modal",
+      href: "/2",
+    },
   ];
   return (
     <div className="border flex flex-col gap-2">
