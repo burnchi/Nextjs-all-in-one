@@ -16,7 +16,7 @@ const P1 = () => {
         <div
           key={item}
           className={twMerge(
-            "flex justify-center items-center w-[300px] h-[40px]",
+            "flex justify-center items-center w-[300px] h-[40px] cursor-default",
             aindex === inx && "bg-green-400 text-white",
           )}
           onMouseEnter={() => onEnter(inx)}

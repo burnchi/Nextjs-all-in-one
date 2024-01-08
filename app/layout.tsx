@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import HomeLink from "@/components/HomeLink";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,13 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-
-        <Link
-          href="/"
-          className="text-xl hover:text-orange-800 absolute bottom-5 right-1/2 translate-x-1/2"
-        >
-          Back to Home
-        </Link>
+        <HomeLink />
       </body>
     </html>
   );
