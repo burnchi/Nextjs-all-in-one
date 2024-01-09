@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const P6 = () => {
   return (
-    <div className="h-fit w-[36%] rounded-[15px] shadow-p6-container overflow-hidden">
+    <div className="h-fit xl:w-[36%] lg:w-[50%] md:w-[60%] sm:w-[90%] rounded-[15px] shadow-p6-container overflow-hidden">
       <div className="flex items-center justify-center bg-[#bbdefb] w-full h-[160px] relative">
-        <div className="relative w-[130px] h-[130px] rounded-full overflow-hidden shadow-p6-pic">
+        <div className="relative sm:w-[130px] w-[100px] sm:h-[130px] h-[100px] rounded-full overflow-hidden shadow-p6-pic">
           <Image src="/p6.png" alt="pic" fill />
         </div>
         <Link
@@ -22,32 +22,40 @@ const P6 = () => {
           注册
         </Link>
       </div>
-      <form className="h-fit  py-10 px-[80px] flex flex-wrap justify-center gap-y-8 border">
-        <div className="w-full border flex flex-col">
-          <label htmlFor="">邮箱</label>
+      <form className="h-fit  py-10 px-[15%] flex flex-wrap justify-center md:gap-y-12 gap-y-6 border">
+        <div className="w-full  flex flex-col relative">
           <input
             type="text"
-            placeholder="邮箱"
             name="email"
             id="email"
-            className="border h-[5vh] px-3 outline-none"
+            className="rounded-[20px] h-[5vh] ring-1 ring-neutral-500/30 peer focus:ring-[#399af2] px-[14px] pt-[7px] pb-[8px] text-sm outline-none bg-[#e8f0fe] focus:rounded-[5px] transition-all ease duration-300"
           />
+          <label
+            htmlFor="email"
+            className="transition-all ease duration-300 absolute left-1 top-1/2 -translate-y-1/2 peer-focus:text-[#399af2] peer-focus:-top-[12px] peer-focus:left-0.4 ml-3 text-base peer-focus:text-sm text-[#828282]"
+          >
+            邮箱
+          </label>
         </div>
-        <div className="w-full flex flex-col">
-          <label htmlFor="password">密码</label>
+        <div className="w-full flex flex-col relative">
           <input
-            type="password"
-            placeholder="密码"
+            type="text"
             name="password"
             id="password"
-            className="border h-[5vh] px-3 outline-none"
+            className="rounded-[20px] h-[5vh] ring-1 ring-neutral-500/30 peer focus:ring-[#399af2] px-[14px] pt-[7px] pb-[8px] text-sm outline-none bg-[#e8f0fe] focus:rounded-[5px] transition-all ease duration-300"
           />
+          <label
+            htmlFor="password"
+            className="transition-all ease duration-300 absolute left-1 top-1/2 -translate-y-1/2 peer-focus:text-[#399af2] peer-focus:-top-[12px] peer-focus:left-0.4 ml-3 text-base peer-focus:text-sm text-[#828282]"
+          >
+            密码
+          </label>
         </div>
         {/* 提交按钮 */}
         <button
           // 如果没登录禁止提交
           type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring focus:border-blue-300 w-full disabled:bg-gray-400"
+          className="bg-blue-500  text-white font-bold py-2 px-4 rounded-[20px] hover:rounded-[5px]  w-full disabled:bg-gray-400 transition-all ease duration-300"
         >
           登录
         </button>
