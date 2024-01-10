@@ -39,7 +39,7 @@ const P3 = () => {
     },
   ];
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-[200px]">
       <nav className="flex ">
         {navItems.map((item) => (
           <div key={item.label} className="relative group">
@@ -76,6 +76,19 @@ const P3 = () => {
           </div>
         ))}
       </nav>
+      {/* 第二个 */}
+      <div className="flex ">
+        {navItems.map((item) => (
+          <Link
+            key={item.label}
+            href={item.href}
+            className="group relative font-[400] h-full p-4  flex justify-center items-center hover:text-blue-600"
+          >
+            {item.label}
+            <span className="absolute bottom-2 h-1 group-hover:w-[70%] left-[15%] w-0 transition-all ease duration-300 bg-blue-600" />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

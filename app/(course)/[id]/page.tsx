@@ -4,6 +4,7 @@ import P3 from "@/components/P3";
 import P4 from "@/components/P4";
 import P5 from "@/components/P5";
 import P6 from "@/components/P6";
+import P7 from "@/components/P7";
 import React from "react";
 
 interface pageProps {
@@ -20,6 +21,7 @@ const page: React.FC<pageProps> = ({ params }) => {
       {id === "4" && <P4 />}
       {id === "5" && <P5 />}
       {id === "6" && <P6 />}
+      {id === "7" && <P7 />}
     </>
   );
 };

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -26,6 +25,10 @@ export default function Home() {
     {
       label: "表单",
       href: "/6",
+    },
+    {
+      label: "按钮",
+      href: "/7",
     },
   ];
   return (
