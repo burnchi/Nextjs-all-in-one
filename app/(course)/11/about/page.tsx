@@ -1,9 +1,9 @@
 import React from 'react'
-import Inner from '../components/inner'
 
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <div className='min-h-[90vh]'>
+      AboutPage</div>
   )
 }
 

@@ -1,9 +1,8 @@
 import React from 'react'
-import Inner from './components/inner'
 
 const page = () => {
   return (
-    <div>
+    <div className='h-[90vh]'>
       home
     </div>
   )

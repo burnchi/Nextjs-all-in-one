@@ -2,9 +2,11 @@
 
 import { usePathname } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
-import FrozenRoute from './FrozenRouter'
+// import FrozenRoute from './FrozenRouter'
 import { ReactNode } from 'react'
+import dynamic from 'next/dynamic'
 
+const FrozenRoute = dynamic(() => import('./FrozenRouter'), { ssr: false })
 const PageAnimatePresence = ({ children }: { children: ReactNode }) => {
   const pathname = usePathname()
 

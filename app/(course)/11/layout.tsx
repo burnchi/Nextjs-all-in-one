@@ -1,17 +1,15 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import PageAnimatePresence from './components/PageAnimatePresence';
 
 
-interface layoutProps {
-  children: React.ReactNode;
-  className?: string;
-}
-const layout: React.FC<layoutProps> = ({
+const AnimateLayout = ({
   children
+}: {
+  children: ReactNode
 }) => {
   return (
     <PageAnimatePresence>{children}</PageAnimatePresence>
   )
 }
 
-export default layout
+export default AnimateLayout

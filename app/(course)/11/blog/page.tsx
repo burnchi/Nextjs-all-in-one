@@ -1,12 +1,9 @@
 import React from 'react'
-import Inner from '../components/inner'
-import { motion } from "framer-motion"
 
 const BlogPage = () => {
   return (
-    <div key='blog'>
-      <div>BlogPage</div>
-    </div>
+    <div className='h-[90vh]'>
+      BlogPage    </div>
   )
 }
 
