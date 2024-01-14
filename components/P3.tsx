@@ -1,43 +1,9 @@
+import { navItems } from "@/lib/data";
 import Link from "next/link";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
 const P3 = () => {
-  const navItems = [
-    {
-      label: "home",
-      href: "/",
-    },
-    {
-      label: "Blog",
-      href: "/",
-    },
-    {
-      label: "Guides",
-      href: "/",
-      child: [
-        {
-          label: "HTML",
-          href: "/",
-          color: "bg-red-300",
-        },
-        {
-          label: "CSS",
-          href: "/",
-          color: "bg-green-300",
-        },
-        {
-          label: "JS",
-          href: "/",
-          color: "bg-blue-300",
-        },
-      ],
-    },
-    {
-      label: "About",
-      href: "/",
-    },
-  ];
   return (
     <div className="flex flex-col gap-[200px]">
       <nav className="flex ">

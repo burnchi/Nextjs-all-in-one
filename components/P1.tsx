@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -11,7 +10,7 @@ const P1 = () => {
   };
 
   return (
-    <div className="flex flex-col border-black border-[5px] h-fit">
+    <div className="flex flex-col border-black border-[5px] h-fit w-fit">
       {items.map((item, inx) => (
         <div
           key={item}
