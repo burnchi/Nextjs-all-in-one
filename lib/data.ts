@@ -41,8 +41,16 @@ export const pageItems = [
     href: "/10",
   },
   {
-    label: "换页特效",
+    label: "换页特效1",
     href: "/11",
+  },
+  {
+    label: "换页特效2",
+    href: "/12",
+  },
+  {
+    label: "换页特效3",
+    href: "/13",
   },
 ];
 
@@ -80,6 +88,78 @@ export const navItems = [
   {
     label: "About",
     href: "/11/about",
+  },
+];
+
+export const navItems12 = [
+  {
+    label: "home",
+    href: "/12",
+  },
+  {
+    label: "Blog",
+    href: "/12/blog",
+  },
+  {
+    label: "Guides",
+    href: "/12/guide",
+    child: [
+      {
+        label: "HTML",
+        href: "/",
+        color: "bg-red-300",
+      },
+      {
+        label: "CSS",
+        href: "/",
+        color: "bg-green-300",
+      },
+      {
+        label: "JS",
+        href: "/",
+        color: "bg-blue-300",
+      },
+    ],
+  },
+  {
+    label: "About",
+    href: "/12/about",
+  },
+];
+
+export const navItems13 = [
+  {
+    label: "home",
+    href: "/13",
+  },
+  {
+    label: "Blog",
+    href: "/13/blog",
+  },
+  {
+    label: "Guides",
+    href: "/13/guide",
+    child: [
+      {
+        label: "HTML",
+        href: "/",
+        color: "bg-red-300",
+      },
+      {
+        label: "CSS",
+        href: "/",
+        color: "bg-green-300",
+      },
+      {
+        label: "JS",
+        href: "/",
+        color: "bg-blue-300",
+      },
+    ],
+  },
+  {
+    label: "About",
+    href: "/13/about",
   },
 ];
 

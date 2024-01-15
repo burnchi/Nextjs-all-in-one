@@ -70,8 +70,8 @@ export default function Template({ children }: { children: ReactNode }) {
   const pathname = usePathname()
   return (
     <div className='bg-black'>
-      <motion.div {...anim(slide)} className='bg-white z-10 top-0left-0 w-[100vw] h-[100vh] fixed' />
-      <motion.div {...anim(perspective)} className=' bg-white '>
+      <motion.div  {...anim(slide)} className='bg-white z-10 top-0left-0 w-[100vw] h-[100vh] fixed' />
+      <motion.div  {...anim(perspective)} className=' bg-white '>
         <motion.div  {...anim(opacity)}>
           <div className="flex mx-auto justify-center w-[80vw]">
             {navItems.map((item) => (
