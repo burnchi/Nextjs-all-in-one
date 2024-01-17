@@ -52,6 +52,10 @@ export const pageItems = [
     label: "换页特效3",
     href: "/13",
   },
+  {
+    label: "滑动视差",
+    href: "/14",
+  },
 ];
 
 

@@ -6,6 +6,9 @@ import { LayoutRouterContext } from 'next/dist/shared/lib/app-router-context.sha
 const FrozenRoute = ({ children }: { children: ReactNode }) => {
   const context = useContext(LayoutRouterContext)
   const frozen = useRef(context).current
+  console.log(frozen);
+  console.log(context);
+
 
   return <LayoutRouterContext.Provider value={frozen}>{children}</LayoutRouterContext.Provider>
 }

@@ -10,7 +10,7 @@ const HomeLink = () => {
       {pathname !== "/" && (
         <Link
           href="/"
-          className="text-xl hover:text-orange-800 absolute bottom-5 right-5"
+          className="text-xl hover:text-orange-800 bottom-5 right-5 fixed"
         >
           Back to Home
         </Link>
