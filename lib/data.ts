@@ -56,6 +56,10 @@ export const pageItems = [
     label: "滑动视差",
     href: "/14",
   },
+  {
+    label: "轮播图",
+    href: "/15",
+  },
 ];
 
 
