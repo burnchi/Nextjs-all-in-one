@@ -1,0 +1,21 @@
+.progress {
+  position: relative;
+  width: 400px;
+  height: 32px;
+  border: solid 2px #999;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress>span {
+  position: absolute;
+  background: repeating-linear-gradient(45deg, #82B54B 0px 6px, #95C066 7px 15px);
+  height: 200px;
+  animation: move 3s linear infinite;
+}
+
+@keyframes move {
+  100% {
+    transform: translate(0px, -64px);
+  }
+}

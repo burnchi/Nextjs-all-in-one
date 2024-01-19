@@ -60,6 +60,10 @@ export const pageItems = [
     label: "轮播图",
     href: "/15",
   },
+  {
+    label: "进度条",
+    href: "/16",
+  },
 ];
 
 

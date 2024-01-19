@@ -22,6 +22,16 @@ const config: Config = {
         "p6-container": "0 0 7px 1px #c5c5c5",
         "p6-pic": "0 0 5px 0px #afafaf",
       },
+      animation: {
+        shining: "shine 1s linear infinite alternate"
+      },
+      keyframes: {
+        shine: {
+          "to": {
+            "box-shadow": "0 0 24px #007fff"
+          }
+        }
+      }
     },
   },
   plugins: [],
