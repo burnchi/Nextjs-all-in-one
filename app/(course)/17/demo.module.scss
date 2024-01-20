@@ -1,0 +1,50 @@
+$bg-color: #cccccc;
+$primary: #007fff;
+
+.container {
+  padding: 30px;
+  // use variable
+  background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  // use built-in function 
+  border: 2px solid darken($bg-color, 30);
+
+  span {
+    color: cyan;
+  }
+}
+
+
+// export variable
+:export {
+  primaryColor: $primary
+}
+
+//define function
+@mixin lg-text {
+  font-size: 3rem;
+  line-height: 24px;
+}
+
+
+// use function
+.textlg {
+  @include lg-text();
+  //define animation
+  animation: changeColor 1s linear infinite
+}
+
+@keyframes changeColor {
+  from {
+    color: blue;
+  }
+
+  to {
+    color: orange;
+  }
+}
