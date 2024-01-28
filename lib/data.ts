@@ -80,6 +80,10 @@ export const pageItems = [
     label: "gsap动画2",
     href: "/19",
   },
+  {
+    label: "animate练习",
+    href: "/20",
+  },
 ];
 
 

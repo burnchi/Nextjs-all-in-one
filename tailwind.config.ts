@@ -23,9 +23,65 @@ const config: Config = {
         "p6-pic": "0 0 5px 0px #afafaf",
       },
       animation: {
-        shining: "shine 1s linear infinite alternate"
+        shining: "shine 1s linear infinite alternate",
+        move1: "move 0.3s linear",
+        scale: "scale 0.3s linear",
+        expand: "expand 0.3s linear",
+        zoom: "zoom 0.3s linear",
+        MoveScale: "MoveScale 0.3s linear",
+
       },
       keyframes: {
+        MoveScale: {
+          "0%": {
+            width: "0",
+            height: "0",
+            transform: "translateX(0) translateY(0)",
+            top: "12px",
+            left: "12px",
+            opacity: "0"
+          },
+          "100%": {
+            width: "200px",
+            height: "200px",
+            transform: "translateX(-50%) translateY(-50%)",
+            top: "50%",
+            left: "50%",
+            opacity: "1"
+          }
+        },
+        zoom: {
+          "0%": {
+            width: "200px"
+          },
+          "100%": {
+            width: "0"
+          }
+        },
+        expand: {
+          "0%": {
+            width: "0"
+          },
+          "100%": {
+            width: "200px"
+          }
+        },
+        scale: {
+          "0%": {
+            transform: "scale(1)"
+          },
+          "100%": {
+            transform: "scale(1.2)"
+          }
+        },
+        move: {
+          "0%": {
+            transform: "translateX(0px)"
+          },
+          "100%": {
+            transform: "translateX(200px)"
+          }
+        },
         shine: {
           "to": {
             "box-shadow": "0 0 24px #007fff"
