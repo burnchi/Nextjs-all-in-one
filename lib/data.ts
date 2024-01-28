@@ -1,4 +1,8 @@
 
+import { AiFillSignal } from "react-icons/ai";
+import { BiTransfer } from "react-icons/bi";
+import { TiTags } from "react-icons/ti";
+import { BiCategory } from "react-icons/bi";
 export const pageItems = [
   {
     label: "离开盒子高亮还在",
@@ -67,6 +71,14 @@ export const pageItems = [
   {
     label: "Sass练习",
     href: "/17",
+  },
+  {
+    label: "gsap动画1",
+    href: "/18",
+  },
+  {
+    label: "gsap动画2",
+    href: "/19",
   },
 ];
 
@@ -179,3 +191,85 @@ export const navItems13 = [
   },
 ];
 
+export const navItems3_3 = [
+  {
+    title: "文章",
+    link: "/posts",
+    isclick: true,
+    child: [
+      {
+        title: "分类",
+        link: "/categories",
+        icon: BiCategory
+      },
+      {
+        title: "标签",
+        link: "/tags",
+        icon: TiTags
+      },
+      {
+        title: "归档",
+        link: "/archives",
+        icon: BiTransfer
+      },
+      {
+        title: "文章数据",
+        link: "/chart",
+        icon: AiFillSignal
+      },
+    ],
+  },
+
+  {
+    title: "娱乐",
+    link: "/hobby",
+    isclick: false,
+    child: [
+      {
+        title: "电影",
+        link: "/hobby/movies",
+        icon: BiCategory
+      },
+    ],
+  },
+
+  {
+    title: "发现",
+    link: "/discover",
+    isclick: false,
+    child: [
+      {
+        title: "学习网站",
+        link: "/discover/website",
+        icon: BiCategory
+      },
+    ],
+  },
+  {
+    title: "逛逛",
+    link: "/see",
+    isclick: false,
+    child: [
+      {
+        title: "友人帐",
+        link: "/see/friends",
+        icon: BiCategory
+      },
+      {
+        title: "相册",
+        link: "/see/photos",
+        icon: BiCategory
+      },
+      {
+        title: "留言板",
+        link: "/see/messageboard",
+        icon: TiTags
+      },
+    ],
+  },
+  {
+    title: "关于我",
+    link: "/aboutme",
+    isclick: true,
+  },
+]

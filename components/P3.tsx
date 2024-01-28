@@ -1,4 +1,5 @@
-import { navItems } from "@/lib/data";
+"use client"
+import { navItems, navItems3_3 } from "@/lib/data";
 import Link from "next/link";
 import React from "react";
 import { twMerge } from "tailwind-merge";
@@ -6,6 +7,7 @@ import { twMerge } from "tailwind-merge";
 const P3 = () => {
   return (
     <div className="flex flex-col gap-[200px]">
+      {/* 第一个 */}
       <nav className="flex ">
         {navItems.map((item) => (
           <div key={item.label} className="relative group">
@@ -55,8 +57,46 @@ const P3 = () => {
           </Link>
         ))}
       </div>
+
+      {/* 第三个 */}
+      <div className="flex ml-20">
+        {
+          navItems3_3.map((item) => (
+            <div className="relative group">
+              <Link key={item.title} href={item.link}
+                className="p-2 group-hover:bg-orange-400 group-hover:text-white"
+              >
+                {item.title}
+              </Link>
+              {
+                item?.child &&
+                <div className="group-hover:flex hidden bg-transparent shadow-sm rounded-md overflow-hidden flex-col text-center absolute border   left-1/2 -translate-x-1/2 top-[calc(100%+5px)]">
+                  {
+                    item.child.map((childitem) => <SubmenuItem key={childitem.title} {...childitem} />)
+                  }
+                </div>
+              }
+            </div>
+          ))
+        }
+      </div>
     </div>
   );
 };
 
 export default P3;
+
+const SubmenuItem = ({ title, link, icon: Icon }: {
+  title: string,
+  link: string,
+  icon: any
+}) => {
+  return (
+    <Link key={title} href={link}
+      className="p-2 hover:bg-orange-400 hover:text-white truncate flex items-center gap-2 justify-center"
+    >
+      <Icon />
+      {title}
+    </Link>
+  )
+}
