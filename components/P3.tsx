@@ -62,8 +62,8 @@ const P3 = () => {
       <div className="flex ml-20">
         {
           navItems3_3.map((item) => (
-            <div className="relative group">
-              <Link key={item.title} href={item.link}
+            <div className="relative group" key={item.title}>
+              <Link href={item.link}
                 className="p-2 group-hover:bg-orange-400 group-hover:text-white"
               >
                 {item.title}
