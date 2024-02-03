@@ -84,6 +84,10 @@ export const pageItems = [
     label: "animate练习",
     href: "/20",
   },
+  {
+    label: "javascript练习",
+    href: "/21",
+  },
 ];
 
 
@@ -275,5 +279,102 @@ export const navItems3_3 = [
     title: "关于我",
     link: "/aboutme",
     isclick: true,
+  },
+]
+export const navItems3_4 = [
+  {
+    id: 1,
+    title: "文章",
+    link: "/posts",
+    visible: false,
+    child: [
+      {
+        title: "分类",
+        link: "/categories",
+        icon: BiCategory
+      },
+      {
+        title: "标签",
+        link: "/tags",
+        icon: TiTags
+      },
+      {
+        title: "归档",
+        link: "/archives",
+        icon: BiTransfer
+      },
+      {
+        title: "文章数据",
+        link: "/chart",
+        icon: AiFillSignal
+      },
+    ],
+  },
+
+  {
+    id: 2,
+    title: "娱乐",
+    link: "/hobby",
+    visible: false,
+    child: [
+      {
+        title: "电影",
+        link: "/hobby/movies",
+        icon: BiCategory
+      },
+      {
+        title: "明星",
+        link: "/hobby/stars",
+        icon: BiCategory
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    title: "发现",
+    link: "/discover",
+    visible: false,
+    child: [
+      {
+        title: "学习网站",
+        link: "/discover/website",
+        icon: BiCategory
+      },
+      {
+        title: "有趣新闻",
+        link: "/discover/news",
+        icon: BiCategory
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "逛逛",
+    link: "/see",
+    visible: false,
+    child: [
+      {
+        title: "友人帐",
+        link: "/see/friends",
+        icon: BiCategory
+      },
+      {
+        title: "相册",
+        link: "/see/photos",
+        icon: BiCategory
+      },
+      {
+        title: "留言板",
+        link: "/see/messageboard",
+        icon: TiTags
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "关于我",
+    link: "/aboutme",
+    visible: false,
   },
 ]

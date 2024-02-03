@@ -29,9 +29,26 @@ const config: Config = {
         expand: "expand 0.3s linear",
         zoom: "zoom 0.3s linear",
         MoveScale: "MoveScale 0.3s linear",
-
+        submenu: "submenu 0.2s linear",
+        foldsubmenu: "foldsubmenu 0.2s linear",
       },
       keyframes: {
+        submenu: {
+          "0%": {
+            transform: "scaleY(0)"
+          },
+          "100%": {
+            transform: "scaleY(100%)"
+          }
+        },
+        foldsubmenu: {
+          "0%": {
+            height: "100%"
+          },
+          "100%": {
+            height: "0"
+          }
+        },
         MoveScale: {
           "0%": {
             width: "0",

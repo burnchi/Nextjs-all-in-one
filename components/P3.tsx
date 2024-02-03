@@ -1,10 +1,25 @@
 "use client"
-import { navItems, navItems3_3 } from "@/lib/data";
+import { navItems, navItems3_3, navItems3_4 } from "@/lib/data";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 const P3 = () => {
+  const [subMenus, setSubMenus] = useState(navItems3_4)
+
+  const handleToggleSubmenu = (id: number) => {
+    setSubMenus(prevSubmenus => {
+      return prevSubmenus.map((submenu) => {
+        // 点哪个一级菜单，展开对应的子菜单
+        if (submenu.id === id) {
+          return { ...submenu, visible: !submenu.visible }
+        }
+        // 其他没点到的一级菜单都设置为折叠
+        return { ...submenu, visible: false }
+      })
+    })
+
+  }
   return (
     <div className="flex flex-col gap-[200px]">
       {/* 第一个 */}
@@ -80,6 +95,30 @@ const P3 = () => {
           ))
         }
       </div>
+
+      {/* 第四个 */}
+      <div className="ml-20 mb-[30vh] shadow-sm w-fit">
+        {
+          subMenus.map((submenu) =>
+            <div className="flex flex-col relative w-[200px] bg-white shadow-md" key={submenu.id}>
+              <button className="p-4 text-left border"
+                onClick={() => handleToggleSubmenu(submenu.id)}
+              >
+                {submenu.title}
+              </button>
+              {
+                submenu?.child &&
+                <div className={twMerge("flex flex-col transition-all ease-in duration-200 bg-transparent overflow-hidden",
+                  submenu.visible ? "max-h-[500px] opacity-100" : "max-h-0 opacity-30")}>
+                  {
+                    submenu.child.map((childitem) => <SubmenuItem key={childitem.title} {...childitem} />)
+                  }
+                </div>
+              }
+            </div>
+          )
+        }
+      </div>
     </div>
   );
 };
@@ -93,7 +132,7 @@ const SubmenuItem = ({ title, link, icon: Icon }: {
 }) => {
   return (
     <Link key={title} href={link}
-      className="p-2 hover:bg-orange-400 hover:text-white truncate flex items-center gap-2 justify-center"
+      className="p-2 hover:bg-orange-400 hover:text-white truncate flex items-center gap-1 justify-center "
     >
       <Icon />
       {title}
