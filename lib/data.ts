@@ -378,3 +378,148 @@ export const navItems3_4 = [
     visible: false,
   },
 ]
+
+export const navItems3_5 = [
+  {
+    id: 1,
+    title: "文章",
+    link: "/posts",
+    visible: false,
+    child: [
+      {
+        id: 11,
+        title: "分类",
+        link: "/categories",
+        icon: BiCategory,
+        visible: false,
+        child: [
+          {
+            id: 111,
+            title: "前端",
+            link: "/categories/frontend",
+            icon: BiCategory,
+          },
+          {
+            id: 112,
+            title: "后端",
+            link: "/categories/backend",
+            icon: BiCategory,
+          },
+        ],
+      },
+      {
+        id: 12,
+        title: "标签",
+        link: "/tags",
+        icon: TiTags,
+        visible: false,
+      },
+      {
+        id: 13,
+        title: "归档",
+        link: "/archives",
+        icon: BiTransfer,
+        visible: false,
+
+      },
+      {
+        id: 14,
+        title: "文章数据",
+        link: "/chart",
+        icon: AiFillSignal,
+        visible: false,
+
+      },
+    ],
+  },
+
+  {
+    id: 2,
+    title: "娱乐",
+    link: "/hobby",
+    visible: false,
+    child: [
+      {
+        id: 21,
+        title: "电影",
+        link: "/hobby/movies",
+        icon: BiCategory,
+        visible: false,
+        child: [
+          {
+            id: 211,
+            title: "喜剧电影",
+            link: "/hobby/movies/comedy",
+            icon: BiCategory,
+          },
+          {
+            id: 212,
+            title: "喜剧电影",
+            link: "/hobby/movies/comedy",
+            icon: BiCategory,
+          },
+        ]
+      },
+      {
+        id: 22,
+        title: "明星",
+        link: "/hobby/stars",
+        icon: BiCategory
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    title: "发现",
+    link: "/discover",
+    visible: false,
+    child: [
+      {
+        id: 31,
+        title: "学习网站",
+        link: "/discover/website",
+        icon: BiCategory
+      },
+      {
+        id: 32,
+        title: "有趣新闻",
+        link: "/discover/news",
+        icon: BiCategory
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "逛逛",
+    link: "/see",
+    visible: false,
+    child: [
+      {
+        id: 41,
+        title: "友人帐",
+        link: "/see/friends",
+        icon: BiCategory
+      },
+      {
+        id: 42,
+        title: "相册",
+        link: "/see/photos",
+        icon: BiCategory
+      },
+      {
+        id: 43,
+        title: "留言板",
+        link: "/see/messageboard",
+        icon: TiTags
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "关于我",
+    link: "/aboutme",
+    visible: false,
+  },
+]
+

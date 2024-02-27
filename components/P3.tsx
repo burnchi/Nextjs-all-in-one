@@ -1,11 +1,12 @@
 "use client"
-import { navItems, navItems3_3, navItems3_4 } from "@/lib/data";
+import { navItems, navItems3_3, navItems3_4, navItems3_5 } from "@/lib/data";
 import Link from "next/link";
 import React, { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 const P3 = () => {
   const [subMenus, setSubMenus] = useState(navItems3_4)
+  const [subMenus5, setSubMenus5] = useState(navItems3_5)
 
   const handleToggleSubmenu = (id: number) => {
     setSubMenus(prevSubmenus => {
@@ -20,6 +21,51 @@ const P3 = () => {
     })
 
   }
+
+  const handleToggleSubmenu5 = (id) => {
+    setSubMenus5(prevSubmenus => {
+      return prevSubmenus.map(submenu => {
+        if (submenu.id === id) {
+          return { ...submenu, visible: !submenu.visible };
+        }
+        if (submenu.child) {
+          return { ...submenu, child: toggleChildSubmenu(submenu.child, id) };
+        }
+        return submenu;
+      });
+    });
+  };
+
+  const toggleChildSubmenu = (items, id) => {
+    return items.map(item => {
+      if (item.id === id) {
+        return { ...item, visible: !item.visible };
+      }
+      if (item.child) {
+        return { ...item, child: toggleChildSubmenu(item.child, id) };
+      }
+      return item;
+    });
+  };
+
+  const renderSubmenuItems = (items) => {
+    return (
+      <ul className="flex flex-col relative bg-white">
+        {items.map(submenu => (
+          <li key={submenu.id} className={twMerge("px-3 text-left",
+            submenu.id === 1 && ""
+          )}>
+            <button onClick={() => handleToggleSubmenu5(submenu.id)}
+              className="hover:bg-orange-400 hover:text-white  px-5 py-3"
+            >
+              {submenu.title}
+            </button>
+            {submenu?.child && submenu.visible && submenu.child.length > 0 && renderSubmenuItems(submenu.child)}
+          </li>
+        ))}
+      </ul>
+    );
+  };
   return (
     <div className="flex flex-col gap-[200px]">
       {/* 第一个 */}
@@ -118,6 +164,11 @@ const P3 = () => {
             </div>
           )
         }
+      </div>
+
+      {/* 第五个 */}
+      <div className="ml-20 shadow-md rounded-sm mb-[30vh] w-[200px] ">
+        {renderSubmenuItems(subMenus5)}
       </div>
     </div>
   );

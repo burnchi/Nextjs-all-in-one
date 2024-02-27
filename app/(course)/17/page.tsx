@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./demo.module.scss"
+import styles from './demo.module.scss'
 
 const SassPage = () => {
   return (
