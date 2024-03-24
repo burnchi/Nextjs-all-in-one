@@ -1,8 +1,7 @@
+import HomeLink from "@/components/HomeLink";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import HomeLink from "@/components/HomeLink";
 
 const inter = Inter({ subsets: ["latin"] });
 

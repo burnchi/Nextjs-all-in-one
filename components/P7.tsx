@@ -1,10 +1,10 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
-import styles from "./css/p7.module.css"
-import { FaPencilAlt } from "react-icons/fa";
+import styles from "./css/p7.module.scss";
 const P7 = () => {
+  const { container } = styles;
   return (
-    <div className=" space-x-8 p-12">
+    <div className={container}>
       <Button>Button</Button>
       <button className={styles.button1}>
         <SvgComponent className={styles.pencil} />
@@ -90,4 +90,4 @@ const SvgComponent = (props: any) => (
       d="M58.4 898.4 32.8 976c-3.2 9.6 5.6 18.4 15.2 15.2l77.6-25.6-67.2-67.2z"
     />
   </svg>
-)
+);

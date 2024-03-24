@@ -1,0 +1,195 @@
+.container {
+  padding: 50px;
+
+  h1 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  // all box same style
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid darkorchid;
+  }
+
+  &>div {
+    margin: 20px;
+    position: relative;
+  }
+
+  &>div:nth-of-type(2) {
+    width: 200px;
+  }
+
+
+  &>div>div:nth-of-type(1) {
+    position: absolute;
+  }
+
+  .box1 {
+    transform: translate(50px, 50px);
+  }
+
+
+  .box2 {
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0%);
+  }
+
+
+  .box3 {
+    margin: 150px 0px 50px 20px;
+    // background: darkorchid;
+    border-radius: 4px;
+    position: relative;
+
+    // arrow style color must be same as box color
+    &>div {
+      height: 16px;
+      width: 16px;
+      background: white;
+      position: absolute;
+
+    }
+
+  }
+
+  // top side
+  .arrow1 {
+    right: 10px;
+    top: 0;
+    transform: translate(-50%, calc(-50% - 1px)) rotate(45deg);
+    border-right: 1px;
+    border-bottom: 1px;
+  }
+
+  .arrow2 {
+    left: 10px;
+    top: 0;
+    transform: translate(50%, calc(-50% - 1px)) rotate(45deg);
+    border-right: 1px;
+    border-bottom: 1px;
+  }
+
+
+  // right side
+  .arrow3 {
+    right: 0;
+    top: 10px;
+    transform: translate(calc(50% + 1px), 50%) rotate(45deg);
+    border-left: 1px;
+    border-bottom: 1px;
+  }
+
+  .arrow4 {
+    right: 0;
+    bottom: 10px;
+    transform: translate(calc(50% + 1px), -50%) rotate(45deg);
+    border-left: 1px;
+    border-bottom: 1px;
+  }
+
+  // bottom side
+  .arrow5 {
+    right: 10px;
+    bottom: 0;
+    transform: translate(-50%, calc(50% + 1px)) rotate(45deg);
+    border-left: 1px;
+    border-top: 1px;
+  }
+
+  .arrow6 {
+    left: 10px;
+    bottom: 0;
+    transform: translate(50%, calc(50% + 1px)) rotate(45deg);
+    border-left: 1px;
+    border-top: 1px;
+  }
+
+  // right side
+  .arrow7 {
+    left: 0;
+    top: 10px;
+    transform: translate(calc(-50% - 1px), 50%) rotate(45deg);
+    border-right: 1px;
+    border-top: 1px;
+  }
+
+  .arrow8 {
+    left: 0;
+    bottom: 10px;
+    transform: translate(calc(-50% - 1px), -50%) rotate(45deg);
+    border-right: 1px;
+    border-top: 1px;
+  }
+
+  .box4 {
+    margin: 30px 0px 50px 20px;
+
+    .rotate {
+      width: 50px;
+      height: 50px;
+      border-top: 1px solid green;
+      border-right: 1px solid red;
+      border-bottom: 1px solid violet;
+      border-left: 1px solid blue;
+      transform: rotate(45deg);
+    }
+  }
+
+  .box5 {
+    position: relative;
+
+    &>div {
+      height: 16px;
+      width: 16px;
+      background: white;
+      position: absolute;
+
+    }
+
+    // left
+    .skew1 {
+      left: 0;
+      bottom: 10px;
+      transform: translate(calc(-50% - 1px), -50%) skew(45deg);
+      border-right: 1px;
+      border-bottom: 1px;
+    }
+
+    //bottom
+    .skew2 {
+      right: 10px;
+      bottom: 0;
+      transform: translate(-50%, calc(50% + 1px)) skew(45deg) rotate(45deg);
+      border-left: 1px;
+      border-top: 1px;
+    }
+
+    // right
+    .skew3 {
+      right: 0;
+      top: 10px;
+      transform: translate(calc(50% + 1px), 50%) skew(45deg);
+      border-left: 1px;
+      border-top: 1px;
+    }
+
+    // top
+    .skew4 {
+      top: 0;
+      left: 10px;
+      transform: translate(50%, calc(-50% - 1px)) skew(45deg) rotate(45deg);
+      border-bottom: 1px;
+      border-right: 1px;
+    }
+
+  }
+}

@@ -1,0 +1,93 @@
+.container {
+  padding: 30px;
+
+  h1 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  &>div {
+    border: 1px solid darkorchid;
+    margin: 20px;
+    display: grid;
+    width: 500px;
+  }
+}
+
+// equal width 
+.box1 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  div {
+    background-color: violet;
+    height: 100px;
+  }
+
+}
+
+.box2 {
+  grid-template-columns: 100px 1fr 30%;
+  grid-template-rows: 100px 200px;
+  gap: 10px;
+
+  div {
+    background-color: violet;
+  }
+}
+
+// 最小100px，不限宽
+.box3 {
+  grid-template-columns: minmax(100px, auto) 1fr 30%;
+  grid-template-rows: 100px 200px;
+  gap: 10px;
+
+  div {
+    background-color: violet;
+  }
+}
+
+// equal width 
+.box4 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+
+  .first {
+    // change size
+    // grid-column-start: 2;
+    // grid-column-end: 4;
+    // or grid-area property 
+    // grid-row-start, grid-column-start, grid-row-end and grid-column-end.
+    grid-area: 2/1/4/2;
+    // change position
+    grid-row: 1;
+    grid-column: 2/4;
+
+  }
+
+  div {
+    background-color: violet;
+  }
+
+}
+
+// equal width 
+.box5 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  // around start size
+  justify-items: start;
+  align-items: start;
+  gap: 10px;
+
+  .last {
+    grid-row: 2;
+    grid-column: 3/4;
+  }
+
+  div {
+    background-color: violet;
+  }
+
+}

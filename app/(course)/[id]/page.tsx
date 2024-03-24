@@ -1,5 +1,15 @@
 import P1 from "@/components/P1";
+import P10 from "@/components/P10";
+import P14 from "@/components/P14";
+import P15 from "@/components/P15";
+import P16 from "@/components/P16";
+import P18 from "@/components/P18";
+import P19 from "@/components/P19";
 import P2 from "@/components/P2";
+import P20 from "@/components/P20";
+import P21 from "@/components/P21";
+import P22 from "@/components/P22";
+import P23 from "@/components/P23";
 import P3 from "@/components/P3";
 import P4 from "@/components/P4";
 import P5 from "@/components/P5";
@@ -7,14 +17,6 @@ import P6 from "@/components/P6";
 import P7 from "@/components/P7";
 import P8 from "@/components/P8";
 import P9 from "@/components/P9";
-import P10 from "@/components/P10";
-import P14 from "@/components/P14";
-import P15 from "@/components/P15";
-import P16 from "@/components/P16";
-import P18 from "@/components/P18";
-import P19 from "@/components/P19";
-import P20 from "@/components/P20";
-import P21 from "@/components/P21";
 import React from "react";
 
 interface pageProps {
@@ -42,6 +44,8 @@ const page: React.FC<pageProps> = ({ params }) => {
       {id === "19" && <P19 />}
       {id === "20" && <P20 />}
       {id === "21" && <P21 />}
+      {id === "22" && <P22 />}
+      {id === "23" && <P23 />}
     </>
   );
 };

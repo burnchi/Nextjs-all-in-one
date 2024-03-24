@@ -1,0 +1,41 @@
+$themes: (
+  light: (bgColor: #fff,
+    textColor: blue,
+  ),
+  dark: (bgColor: #000,
+    textColor: violet,
+  )
+);
+
+$curTheme: 'light';
+
+@mixin useTheme() {
+  @each $key, $value in $themes {
+    // 覆盖全局变量值
+    $curTheme: $key !global;
+
+    // & 占位符代表任意css选择器
+    [data-theme='#{$key}'] & {
+      // 调用useTheme的函数体
+      @content;
+    }
+  }
+}
+
+// get correspond to obj value
+@function getVar($paramName) {
+  $themeMap: map-get($themes, $curTheme);
+  @return map-get($themeMap, $paramName);
+}
+
+// different theme will use different color
+.item {
+
+  // use theme function
+  @include useTheme {
+    transition: all 0.3s ease-in;
+    background: getVar('bgColor');
+    color: getVar('textColor');
+
+  }
+}

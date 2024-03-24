@@ -1,8 +1,6 @@
-
 import { AiFillSignal } from "react-icons/ai";
-import { BiTransfer } from "react-icons/bi";
+import { BiCategory, BiTransfer } from "react-icons/bi";
 import { TiTags } from "react-icons/ti";
-import { BiCategory } from "react-icons/bi";
 export const pageItems = [
   {
     label: "离开盒子高亮还在",
@@ -88,8 +86,15 @@ export const pageItems = [
     label: "javascript练习",
     href: "/21",
   },
+  {
+    label: "网格布局",
+    href: "/22",
+  },
+  {
+    label: "transform练习",
+    href: "/23",
+  },
 ];
-
 
 export const navItems = [
   {
@@ -208,22 +213,22 @@ export const navItems3_3 = [
       {
         title: "分类",
         link: "/categories",
-        icon: BiCategory
+        icon: BiCategory,
       },
       {
         title: "标签",
         link: "/tags",
-        icon: TiTags
+        icon: TiTags,
       },
       {
         title: "归档",
         link: "/archives",
-        icon: BiTransfer
+        icon: BiTransfer,
       },
       {
         title: "文章数据",
         link: "/chart",
-        icon: AiFillSignal
+        icon: AiFillSignal,
       },
     ],
   },
@@ -236,7 +241,7 @@ export const navItems3_3 = [
       {
         title: "电影",
         link: "/hobby/movies",
-        icon: BiCategory
+        icon: BiCategory,
       },
     ],
   },
@@ -249,7 +254,7 @@ export const navItems3_3 = [
       {
         title: "学习网站",
         link: "/discover/website",
-        icon: BiCategory
+        icon: BiCategory,
       },
     ],
   },
@@ -261,17 +266,17 @@ export const navItems3_3 = [
       {
         title: "友人帐",
         link: "/see/friends",
-        icon: BiCategory
+        icon: BiCategory,
       },
       {
         title: "相册",
         link: "/see/photos",
-        icon: BiCategory
+        icon: BiCategory,
       },
       {
         title: "留言板",
         link: "/see/messageboard",
-        icon: TiTags
+        icon: TiTags,
       },
     ],
   },
@@ -280,7 +285,7 @@ export const navItems3_3 = [
     link: "/aboutme",
     isclick: true,
   },
-]
+];
 export const navItems3_4 = [
   {
     id: 1,
@@ -291,22 +296,22 @@ export const navItems3_4 = [
       {
         title: "分类",
         link: "/categories",
-        icon: BiCategory
+        icon: BiCategory,
       },
       {
         title: "标签",
         link: "/tags",
-        icon: TiTags
+        icon: TiTags,
       },
       {
         title: "归档",
         link: "/archives",
-        icon: BiTransfer
+        icon: BiTransfer,
       },
       {
         title: "文章数据",
         link: "/chart",
-        icon: AiFillSignal
+        icon: AiFillSignal,
       },
     ],
   },
@@ -320,12 +325,12 @@ export const navItems3_4 = [
       {
         title: "电影",
         link: "/hobby/movies",
-        icon: BiCategory
+        icon: BiCategory,
       },
       {
         title: "明星",
         link: "/hobby/stars",
-        icon: BiCategory
+        icon: BiCategory,
       },
     ],
   },
@@ -339,12 +344,12 @@ export const navItems3_4 = [
       {
         title: "学习网站",
         link: "/discover/website",
-        icon: BiCategory
+        icon: BiCategory,
       },
       {
         title: "有趣新闻",
         link: "/discover/news",
-        icon: BiCategory
+        icon: BiCategory,
       },
     ],
   },
@@ -357,17 +362,17 @@ export const navItems3_4 = [
       {
         title: "友人帐",
         link: "/see/friends",
-        icon: BiCategory
+        icon: BiCategory,
       },
       {
         title: "相册",
         link: "/see/photos",
-        icon: BiCategory
+        icon: BiCategory,
       },
       {
         title: "留言板",
         link: "/see/messageboard",
-        icon: TiTags
+        icon: TiTags,
       },
     ],
   },
@@ -377,7 +382,7 @@ export const navItems3_4 = [
     link: "/aboutme",
     visible: false,
   },
-]
+];
 
 export const navItems3_5 = [
   {
@@ -420,7 +425,6 @@ export const navItems3_5 = [
         link: "/archives",
         icon: BiTransfer,
         visible: false,
-
       },
       {
         id: 14,
@@ -428,7 +432,6 @@ export const navItems3_5 = [
         link: "/chart",
         icon: AiFillSignal,
         visible: false,
-
       },
     ],
   },
@@ -458,13 +461,13 @@ export const navItems3_5 = [
             link: "/hobby/movies/comedy",
             icon: BiCategory,
           },
-        ]
+        ],
       },
       {
         id: 22,
         title: "明星",
         link: "/hobby/stars",
-        icon: BiCategory
+        icon: BiCategory,
       },
     ],
   },
@@ -479,13 +482,13 @@ export const navItems3_5 = [
         id: 31,
         title: "学习网站",
         link: "/discover/website",
-        icon: BiCategory
+        icon: BiCategory,
       },
       {
         id: 32,
         title: "有趣新闻",
         link: "/discover/news",
-        icon: BiCategory
+        icon: BiCategory,
       },
     ],
   },
@@ -499,19 +502,19 @@ export const navItems3_5 = [
         id: 41,
         title: "友人帐",
         link: "/see/friends",
-        icon: BiCategory
+        icon: BiCategory,
       },
       {
         id: 42,
         title: "相册",
         link: "/see/photos",
-        icon: BiCategory
+        icon: BiCategory,
       },
       {
         id: 43,
         title: "留言板",
         link: "/see/messageboard",
-        icon: TiTags
+        icon: TiTags,
       },
     ],
   },
@@ -521,5 +524,4 @@ export const navItems3_5 = [
     link: "/aboutme",
     visible: false,
   },
-]
-
+];

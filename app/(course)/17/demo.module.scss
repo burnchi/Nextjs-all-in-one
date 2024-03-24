@@ -1,3 +1,6 @@
+$bg-color: violet;
+$primary: orange;
+
 .container {
   padding: 30px;
   // use variable
@@ -7,12 +10,27 @@
   gap: 1rem;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   // use built-in function 
   border: 2px solid darken($bg-color, 30);
 
   span {
     color: cyan;
+  }
+
+  .themebtn {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid orange;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+
+    &:hover {
+      color: orange;
+      border-color: violet;
+      transition: color 0.3s;
+    }
   }
 }
 
@@ -33,7 +51,7 @@
 .textlg {
   @include lg-text();
   //define animation
-  animation: changeColor 1s linear infinite
+  animation: changeColor 1s linear infinite;
 }
 
 @keyframes changeColor {

@@ -1,0 +1,173 @@
+.main * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  background: #262626;
+  background-image: linear-gradient(to right, #333 1px, transparent 1px),
+    linear-gradient(to bottom, #333 1px, transparent 1px);
+  background-size: 4vh 4vh;
+}
+
+.textbox h2 {
+  font-size: 5em;
+  color: #fff;
+  font-weight: 600;
+  padding: 0 100px;
+}
+
+.textbox span {
+  color: rgba(255, 255, 255, 0.1);
+  position: relative;
+  animation: displaytext 9s infinite;
+  animation-delay: calc(-3s * var(--i));
+}
+
+@keyframes displaytext {
+  0% {
+    display: inline-block;
+  }
+
+  33.3%,
+  100% {
+    display: none;
+  }
+}
+
+/* when span disappear before also disappear */
+
+.textbox span::before {
+  content: attr(data-text);
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: #01fe87;
+  border-right: 4px solid #01fe87;
+  filter: drop-shadow(0 0 5px #01fe87) drop-shadow(0 0 25px #01fe87);
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  /* 70-90 这段时间已经最大，然后90-100这段时间缩小为0 */
+  70%,
+  90% {
+    width: 103%;
+  }
+}
+
+.showbox {
+  width: 100vw;
+  padding: 10px;
+}
+
+.showbox>h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.showbox>p:nth-of-type(1) {
+  font-size: 30px;
+}
+
+.showbox>p:nth-of-type(2) {
+  letter-spacing: 16px;
+}
+
+.showbox>p:nth-of-type(3) {
+  font-weight: 600;
+}
+
+.showbox>p:nth-of-type(4) {
+  line-height: 30px;
+}
+
+.showbox>p:nth-of-type(5) {
+  font-style: italic;
+}
+
+.fontfamily {
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.fontfamily>h1:nth-child(1) {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.fontfamily>p:nth-of-type(1) {
+  font-family: fangsong;
+}
+
+.fontfamily>p:nth-of-type(2) {
+  font-family: cursive;
+}
+
+.fontfamily>p:nth-of-type(3) {
+  font-family: monospace;
+}
+
+.fontfamily>p:nth-of-type(4) {
+  font:
+    1.2rem "Fira Sans",
+    serif;
+}
+
+.fontfamily>p:nth-of-type(5) {
+  font-family: fantasy;
+}
+
+.fontfamily>p:nth-of-type(6) {
+  font-family: system-ui;
+}
+
+.fontfamily>p:nth-of-type(7) {
+  font-family: ui-serif;
+}
+
+.fontfamily>p:nth-of-type(8) {
+  font-family: ui-sans-serif;
+}
+
+.fontfamily>p:nth-of-type(9) {
+  font-family: ui-monospace;
+}
+
+/* download font family */
+@font-face {
+  font-family: "Bitstream Vera Serif Bold";
+  src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+}
+
+.fontfamily>p:nth-of-type(10) {
+  font-family: "Bitstream Vera Serif Bold", serif;
+}
+
+.paragraph {
+  h1 {
+    font-size: 30px;
+  }
+
+  p {
+    padding: 10px 0px;
+  }
+}
+
+.paragraph1 {
+  h1 {
+    font-size: 30px;
+  }
+}
