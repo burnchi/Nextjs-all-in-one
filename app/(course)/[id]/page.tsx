@@ -10,6 +10,8 @@ import P20 from "@/components/P20";
 import P21 from "@/components/P21";
 import P22 from "@/components/P22";
 import P23 from "@/components/P23";
+import P24 from "@/components/P24";
+import P25 from "@/components/P25";
 import P3 from "@/components/P3";
 import P4 from "@/components/P4";
 import P5 from "@/components/P5";
@@ -46,6 +48,8 @@ const page: React.FC<pageProps> = ({ params }) => {
       {id === "21" && <P21 />}
       {id === "22" && <P22 />}
       {id === "23" && <P23 />}
+      {id === "24" && <P24 />}
+      {id === "25" && <P25 />}
     </>
   );
 };

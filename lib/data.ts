@@ -94,6 +94,14 @@ export const pageItems = [
     label: "transform练习",
     href: "/23",
   },
+  {
+    label: "transition过渡",
+    href: "/24",
+  },
+  {
+    label: "background练习",
+    href: "/25",
+  },
 ];
 
 export const navItems = [

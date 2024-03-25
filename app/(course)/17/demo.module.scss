@@ -1,10 +1,12 @@
+@import 'variables';
 $bg-color: violet;
 $primary: orange;
 
 .container {
   padding: 30px;
   // use variable
-  background-color: $bg-color;
+  // background-color: $bg-color;
+  background-color: $primaryColor;
   display: flex;
   flex-direction: column;
   gap: 1rem;

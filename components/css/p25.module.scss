@@ -1,0 +1,67 @@
+.container {
+  padding: 30px;
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &>div {
+
+    width: 400px;
+    height: 300px;
+  }
+
+  .bg1 {
+    background: url("/p25.png") no-repeat center;
+    // :default
+    background-attachment: scroll;
+    overflow: auto;
+    color: black;
+  }
+
+  .bg2 {
+
+    p:nth-of-type(1) {
+      background: red;
+    }
+
+    p:nth-of-type(2) {
+      background: #0404ee;
+    }
+
+    p:nth-of-type(3) {
+      background: rgb(23, 200, 142);
+    }
+
+    p:nth-of-type(4) {
+      background: rgba(23, 200, 142, 0.5);
+    }
+
+  }
+
+  .bg3 {
+
+    p+* {
+      margin: 20px 0;
+    }
+
+
+    p:nth-of-type(1) {
+      background: linear-gradient(violet, blue);
+    }
+
+    p:nth-of-type(2) {
+      background: linear-gradient(to right, violet, blue);
+    }
+
+    p:nth-of-type(3) {
+      background: linear-gradient(45deg, violet, blue);
+    }
+
+    p:nth-of-type(4) {
+      background: linear-gradient(to right, red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
+    }
+
+  }
+}
